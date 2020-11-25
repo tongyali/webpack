@@ -6,3 +6,8 @@ $(function () {
   $('li:odd').css('backgroundColor', 'yellow')
   $('li:even').css('backgroundColor', 'pink')
 })
+class Person {
+  constructor() {
+    this.name = 'andy'
+  }
+}

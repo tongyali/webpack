@@ -1,6 +1,17 @@
 li{
   list-style: none;
+  opacity: 0.5;
 }
 body{
   background-color: aquamarine;
+  background: url(../images/newkv.jpg);
+}
+::placeholder{
+  color:red;
+}
+#box{
+  width: 585px;
+  height: 340px;
+  background-color: burlywood;
+  background:url(../images/1.jpg);
 }
