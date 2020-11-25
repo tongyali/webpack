@@ -4,6 +4,8 @@ const htmlPlugin = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html'
 })
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const vuePlugin = new VueLoaderPlugin();
 module.exports = {
   mode: 'development',
   // entry: path.join(__dirname, './', 'src', '/', 'index.js'),
@@ -19,7 +21,8 @@ module.exports = {
     // 设置文件名
     filename: "bundle.js"
   },
-  plugins: [htmlPlugin],
+  // plugins: [htmlPlugin],
+  plugins: [htmlPlugin, vuePlugin],
   module: {
     rules: [{
       test: /\.css$/,
@@ -40,6 +43,9 @@ module.exports = {
       use: "babel-loader",
       // exclude为排除项，意思是不要处理 node_modules 中的 js 文件
       exclude: /node_modules/
+    }, {
+      test: /\.vue$/,
+      loader: "vue-loader",
     }]
   }
 }

@@ -8,6 +8,14 @@ $(function () {
 })
 class Person {
   constructor() {
-    this.name = 'andy'
+    Static.name = 'andy'
   }
 }
+console.log(Person);
+//
+import Vue from 'vue';
+import App from './components/App.vue'
+const vm = new Vue({
+  el: '#vm',
+  render: h => h(App)
+})
